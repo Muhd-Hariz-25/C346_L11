@@ -27,7 +27,7 @@ const renderItem = ({item}) => {
   );
 };
 
-const App = () => {
+const Home = () => {
    return (
     <View>
       <StatusBar/>
