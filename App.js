@@ -1,58 +1,10 @@
-import React from 'react';
-import {StatusBar, Button, SectionList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-
-const datasource = [ 
-  {data:[
-    {key: 'a'},
-    {key: 'e'},
-  ],
-  title:"Vowels", bgcolor:"skyblue"},
-  {data:[
-    {key: 'b'},
-    {key: 'c'},
-    {key: 'd'},
-  ],
-  title:"Consonants", bgcolor:"khaki"}
-];
-
-const styles = StyleSheet.create({
-	textStyle: {
-    	fontSize: 15,
-    	margin: 10,
-   		textAlign: 'left',
- 	 },
-   opacityStyle: {
-      borderWidth: 1,
-   },
-   headerText: {
-    fontSize: 20,
-    margin: 10,
-    textAlign: 'center',
-    fontWeight:'bold',
-  },
-});
-
-const renderItem = ({item}) => {
-  return (
-  <TouchableOpacity style={styles.opacityStyle}>
-  <Text style={styles.textStyle}>{item.key}</Text>
-  </TouchableOpacity>
-  );
-};
+import React from "react";
+import Navigation from "./Navigation";
 
 const App = () => {
-   return (
-    <View>
-      <StatusBar/>
-	<Button title='Add Letter'/>
-      <SectionList sections={datasource} renderItem={renderItem} 
-      renderSectionHeader={({section:{title,bgcolor}})=>(
-      <Text style={[styles.headerText,{backgroundColor:bgcolor}]}>
-        {title}
-      </Text>
-      )}/>
-    </View>
-  );
+    return (
+        <Navigation/>
+    );
 };
 
 export default App;
